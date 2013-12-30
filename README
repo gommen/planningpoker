@@ -1,0 +1,12 @@
+This is a very simple cooperative planning poker game
+
+One user acts as the master, and creates a new session. This creates an URL that is distributed to all participants. 
+* Each participant can enter a name. 
+* As participants enter, they are displayed in the playing area. 
+* The master starts a planning round
+* Each participant drags a card onto their place in the playing area. 
+* When all playes have placed their card in the planning area (or when the master presses a button), the cards at displayed for all participants 
+* The average is calculated 
+* And the largest and smallest card is highlighted. 
+* The master can either chose to start a new estimation round, or start a new planning round.
+
