@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Planning Poker</title>
+		<link rel="stylesheet" href="public/stylesheets/jqui/jquery-ui-1.10.3.custom.min.css">
+		<link rel="stylesheet" href="public/stylesheets/card_styles.css">
+		<script src="public/javascripts/jqui/jquery-1.9.1.js"></script>
+		<script src="public/javascripts/jqui/jquery-ui-1.10.3.custom.js"></script>
+		<script src="public/javascripts/client/Model.js"></script>
+		<script src="public/javascripts/client/Presenter.js"></script>
+		<script src="public/javascripts/client/View.js"></script>
+		<script>$( function() {
+ 			var view = new View();
+ 			var model = new Model();
+ 
+			 var presenter = new Presenter(model, view);
+			 
+			 $('#test').click(function (event) {
+			  view.newPlay('Per');
+			 })
+			});
+		</script>
+	</head>
+	<body>
+		<h1>Planning Poker</h1>
+		<div class="ui-widget ui-helper-clearfix">
+			<div id="playingarea" class="ui-widget-content ui-state-default">
+				<h4 class="ui-widget-header"><span class="ui-icon ui-icon-playingarea">playingarea</span></h4>
+			</div>
+			<ul id="cardarea" class="cardarea ui-helper-reset ui-helper-clearfix"></ul>
+		</div>
+	</body>
+</html>

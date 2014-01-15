@@ -1,0 +1,15 @@
+#cardarea { float: left; width: 65%; min-height: 12em; }
+.cardarea.custom-state-active { background: #eee; }
+.cardarea li { float: right; width: 140px; padding: 0.4em; margin: 0 0.4em 0.4em 0; text-align: center; }
+.cardarea li h5 { margin: 0 0 0.4em; cursor: move; }
+.cardarea li a { float: right; }
+.cardarea li a.ui-icon-zoomin { float: left; }
+.cardarea li img { width: 100%; cursor: move; }
+
+#playingarea { float: left; width: 25%; min-height: 25em; padding: 1%; }
+#playingarea h4 { line-height: 16px; margin: 0 0 0.4em; }
+#playingarea h4 .ui-icon { float: left; }
+#playingarea .cardarea h5 { display: none; }
+	
+
+	

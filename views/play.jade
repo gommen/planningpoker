@@ -1,0 +1,31 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		title Planning Poker
+		link(rel='stylesheet', href='stylesheets/jqui/jquery-ui-1.10.3.custom.min.css')
+		link(rel='stylesheet', href='stylesheets/card_styles.css')
+		script(src='javascripts/jqui/jquery-1.9.1.js')
+		script(src='javascripts/jqui/jquery-ui-1.10.3.custom.js')
+		script(src='javascripts/client/Model.js')
+		script(src='javascripts/client/Presenter.js')
+		script(src='javascripts/client/View.js')
+		script.
+			$( function() {
+				var view = new View();
+				var model = new Model();
+
+				var presenter = new Presenter(model, view);
+
+				$('#test').click(function (event) {
+					view.newPlay('Per');
+				})
+			});
+	body
+		h1 Planning Poker
+		div.ui-widget.ui-helper-clearfix
+			div#playingarea.ui-widget-content.ui-state-default
+				h4.ui-widget-header 
+					span.ui-icon.ui-icon-playingarea playingarea
+			ul#cardarea.cardarea.ui-helper-reset.ui-helper-clearfix
+
