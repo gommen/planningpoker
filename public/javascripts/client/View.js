@@ -1,9 +1,9 @@
-function View() {
+function PlayView() {
 	var $cardarea = $( "#cardarea" ),
 		$playingarea = $( "#playingarea" );
 	var cardTemplate='<li class="ui-widget-content ui-corner-tr face" id="{cardName}">\
 						<img src="images/{cardName}.png" alt="{cardName}" width="140" height="205" />\
-						<a href="link/to/playingarea/script/when/we/have/js/off" title="Play this card" class="ui-icon ui-icon-playingarea">\
+						<a href="link/to/playingarea/script/when/we/have/js/off" title="Play this card" class="ui-icon ui-icon-arrowreturn-1-w">\
 						   Play Card\
 						</a>\
 					</li>';
@@ -102,7 +102,7 @@ function View() {
 				$( "ul", $playingarea ) :
 				$( "<ul class='cardarea ui-helper-reset'/>" ).appendTo( $playingarea );
 
-			$item.find( "a.ui-icon-playingarea" ).remove();
+			$item.find( "a.ui-icon-arrowreturn-1-w" ).remove();
 			$item.append( recycle_icon ).appendTo( $list ).fadeIn(function() {
 				$item
 					.animate({ width: "74px" })
@@ -113,7 +113,7 @@ function View() {
 	}
 
 	// image recycle function
-	var playingarea_icon = "<a href='link/to/playingarea/script/when/we/have/js/off' title='Delete this image' class='ui-icon ui-icon-playingarea'>Delete image</a>";
+	var playingarea_icon = "<a href='link/to/playingarea/script/when/we/have/js/off' title='Delete this image' class='ui-icon ui-icon-arrowreturn-1-w'>Delete image</a>";
 	
 	//This function moves a played card from the playing area and back to the cardarea
 	this.recycleImage = function ( $item ) {
@@ -180,7 +180,7 @@ function View() {
 		var $item = $( this ),
 			$target = $( event.target );
 
-		if ( $target.is( "a.ui-icon-playingarea" ) ) {
+		if ( $target.is( "a.ui-icon-arrowreturn-1-w" ) ) {
 			presenter.cardPlayed( $item );
 		} else if ( $target.is( "a.ui-icon-refresh" ) ) {
 			presenter.cardReturned( $item );

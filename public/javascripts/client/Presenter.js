@@ -1,7 +1,7 @@
 //Requires jquery for message propagation
 
 
-	function Presenter(_model, _view) {
+	function PlayPresenter(_model, _view) {
 		
 		//private attributes
 		var model = _model;
