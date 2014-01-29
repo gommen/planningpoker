@@ -1,8 +1,9 @@
 function PlayView() {
 	var $cardarea = $( "#cardarea" ),
 		$playingarea = $( "#playingarea" );
+		//width="140" height="205" 
 	var cardTemplate='<li class="ui-widget-content ui-corner-tr face" id="{cardName}">\
-						<img src="images/{cardName}.png" alt="{cardName}" width="140" height="205" />\
+						<img src="images/{cardName}.png" alt="{cardName}" />\
 						<a href="link/to/playingarea/script/when/we/have/js/off" title="Play this card" class="ui-icon ui-icon-arrowreturn-1-w">\
 						   Play Card\
 						</a>\
