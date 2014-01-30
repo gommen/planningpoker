@@ -16,18 +16,16 @@ html
 				var model = new Model();
 
 				var presenter = new PlayPresenter(model, view);
-
-				$('#test').click(function (event) {
-					view.newPlay('Per');
-				})
 			});
 	body
 		h1 Planning Poker
 		div#namedialog(title='Enter Name')
+			p.validateTips Enter your name - at least 5 chararacters
 			form
 				fieldset
 					label(for='name') Name:
 					input#name.text.ui-widget-content.ui-corner-all(type='text' name='name')
+		
 		div.ui-widget.ui-helper-clearfix
 			div#playingarea.ui-widget-content.ui-state-default
 				h4.ui-widget-header playingarea
